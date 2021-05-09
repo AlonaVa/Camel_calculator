@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+
+        <h2>Kolik velbloudů dostaneš za svého manžela?</h2>
+        <h1><span th:text="${pocetVelbloudu}">0</span></h1>
+        <img src="images/camel2.jpg" alt="camel" class="float-img2">
+    </div>
+</body>
+</html>

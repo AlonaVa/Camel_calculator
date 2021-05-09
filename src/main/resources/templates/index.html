@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Kolik velbloudů?</h1>
+        <h2>Kolik velbloudů dostaneš za svého manžela?</h2>
+
+        <img src="images/camel.jpg" alt="camel" class="float-img">
+        <form method="post">
+
+
+            <div>
+                <label for="o1">Věk:</label>
+                <input id="o1" type="range" name="vek" step="1" min="18" max="100" list="rangeList"
+                       onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+                <datalist id="rangeList">
+
+                </datalist>
+                <span id="rangeValue">18</span>
+            </div>
+            <br>
+
+
+            <div>
+                <label for="o2">Vzdělání</label>
+                <select id="o2" name="vzdelani" class="vzdelani">
+                    <option value="1">základní</option>
+                    <option value="2">střední</option>
+                    <option value="3">bakalařské</option>
+                    <option value="4">magisterské</option>
+                    <option value="5">doktorske</option>
+                </select>
+
+            </div>
+            <br>
+
+
+            <div>
+                <label for="o3">Kolik cizích jazyků umí?</label>
+                <input id="o3" name="jazyky" type="number"/>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Jak často chodí na pivo s kamarády?</label>
+                <p>
+                    <label>
+                        <input type="radio" name="pivo" value="1">
+                        <span>každý den</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="pivo" value="2">
+                        <span>3x nebo vícekrát týdně</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="pivo" value="3">
+                        <span>1x týdně</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="pivo" value="4">
+                        <span>1x měsíčně</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="pivo" value="5">
+                        <span>nechodí</span>
+                    </label>
+                </p>
+            </div>
+
+            <br>
+
+
+            <div>
+                <label>Umí vařit?</label>
+                <p>
+                    <label>
+                        <input type="radio" name="vareni" value="1">
+                        <span>ano</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="vareni" value="2">
+                        <span>ne</span>
+                    </label>
+                </p>
+            </div>
+
+
+            <p><input type="submit" value="Počet velbloudů"/></p>
+
+        </form>
+        
+    </div>
+</body>
+</html>
